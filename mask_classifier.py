@@ -33,6 +33,8 @@ while True:
     # Tomar captura
     print("Capturando imagen...")
     camera.resolution = (300, 300)
+    camera.framerate = 30
+    camera.brightness = 50
     camera.start_preview()
     sleep(5)
     camera.capture(path_image)
