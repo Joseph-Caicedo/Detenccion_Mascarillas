@@ -41,6 +41,7 @@ while True:
     camera.stop_preview()
     print("Captura tomada correctamente\n")
     print("Detectando mascarilla...")
+
     # Importar el modleo de tflite
     interpreter = tflite.Interpreter(model_path=path_model)
     interpreter.allocate_tensors()
@@ -49,7 +50,6 @@ while True:
     output_details = interpreter.get_output_details()
 
     # Procesamiento de imagen
-
     floating_model = input_details[0]['dtype'] == np.float32
 
     height = input_details[0]['shape'][1]
@@ -86,5 +86,3 @@ while True:
         GPIO.output(23, True)
         time.sleep(5)
         GPIO.output(23, False)
-
-    
