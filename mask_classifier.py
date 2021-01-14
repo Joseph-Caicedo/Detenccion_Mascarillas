@@ -37,7 +37,7 @@ while True:
     sleep(5)
     camera.capture(path_image)
     camera.stop_preview()
-    print("Captura tomada correcta\n")
+    print("Captura tomada correctamente\n")
     print("Detectando mascarilla...")
     # Importar el modleo de tflite
     interpreter = tflite.Interpreter(model_path=path_model)
