@@ -70,7 +70,7 @@ while True:
     result = np.squeeze(output_data)
     scalar_result = int(round(np.asscalar(result)))
 
-    #Tomar lectura de la fecha y hora
+    # Tomar lectura de la fecha y hora
     now = datetime.now()
     
     # Revisar condición
